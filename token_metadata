@@ -1,0 +1,113 @@
+Packet Src Porttransfer
+Packet Src Channel channel-10
+Packet Dst Porttransfer
+Packet Dst Channel channel-144
+Contract Address osmo17r7qdw2zk6jyw62cvwm6flmhtj9q7zd26r8zc6sqyf0pnaq46cfss8hgxg
+gravity0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e
+
+ibc/23A62409E4AD8133116C249B1FA38EED30E500A115D7B153109462CD82C1CD99
+
+    {
+      "description": "The OCC token acts as the fuel for the OccamRazer launchpad and it is indirectly used as well on the DAO governance layer.",
+      "type_asset": "erc20",
+      "address": "0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e",
+      "denom_units": [
+        {
+          "denom": "0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e",
+          "exponent": 0,
+          "aliases": []
+        },
+        {
+          "denom": "PAGE",
+          "exponent": 8
+        }
+      ],
+      "base": "0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e",
+      "name": "Page",
+      "display": "Page",
+      "symbol": "PAGE",
+      "logo_URIs": {
+        "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/page.png"
+      },
+      "coingecko_id": "page",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/occamfi.png"
+        }
+      ]
+    }
+----------------------------------------------------------------- 
+   {
+      "chain_name": "gravitybridge",
+      "base_denom": "ibc/23A62409E4AD8133116C249B1FA38EED30E500A115D7B153109462CD82C1CD99",
+      "path": "transfer/channel-144/gravity0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e",
+      "osmosis_verified": false,
+      "canonical": {
+        "chain_name": "ethereum",
+        "base_denom": "0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e"
+      },
+      "override_properties": {
+        "name": "Page (Gravity Bridge)",
+        "symbol": "PAGE.grv",
+        "logo_URIs": {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/page.grv.svg"
+        }
+      },
+      "additional_transfer": [
+        {
+          "name": "Gravity Bridge",
+          "type": "external_interface",
+          "deposit_url": "https://bridge.blockscape.network/?from=gravitybridge&to=osmosis",
+          "withdraw_url": "https://bridge.blockscape.network/?from=osmosis&to=gravitybridge"
+        }
+      ]
+    },
+
+    {
+      "denom_units": [
+        {
+          "denom": "ibc/23A62409E4AD8133116C249B1FA38EED30E500A115D7B153109462CD82C1CD99",
+          "exponent": 8,
+          "aliases": [
+            "PAGE"
+          ]
+        },
+        {
+          "denom": "PAGE.grv",
+          "exponent": 6
+        }
+      ],
+      "type_asset": "ics20",
+      "base": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
+      "name": "PageDAO",
+      "display": "Page",
+      "symbol": "PAGE.grv",
+      "traces": [
+        {
+          "type": "ibc",
+          "counterparty": {
+            "chain_name": "axelar",
+            "base_denom": "uusdc",
+            "channel_id": "channel-3"
+          },
+          "chain": {
+            "channel_id": "channel-208",
+            "path": "transfer/channel-208/uusdc"
+          }
+        }
+      ],
+      "images": [
+        {
+          "image_sync": {
+            "chain_name": "gravitybridge",
+            "base_denom": "page"
+          },
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/gravitybridge/images/usdc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/gravitybridge/images/usdc.svg"
+        }
+      ],
+      "logo_URIs": {
+        "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/gravitybridge/images/usdc.png",
+        "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/gravitybridge/usdc.svg"
+      }
+    },
